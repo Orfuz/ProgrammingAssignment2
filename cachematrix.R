@@ -6,7 +6,7 @@ makeCacheMatrix <- function(x = matrix()) {
     ## We define the set function with "y" argument in order not to be confused
     
     set <- function(y) {
-        ## We assign the "y" argument to "x" in the parent environment and  NULL 
+        ## We assign the "y" argument to "x" in the parent environment and  "NULL" to "inv" in the parent environment
         x<<- y
         inv<<- NULL
     }
@@ -22,8 +22,6 @@ makeCacheMatrix <- function(x = matrix()) {
     
 }
 
-
-## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
     inv <- x$getinverse() ##We try to get an inverse of the matrix passed as the argument of the function
